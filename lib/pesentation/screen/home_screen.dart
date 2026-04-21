@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return GradientScaffold(
       title: AppStrings.homeTitle,
       body: SafeArea(
-        child: SingleChildScrollView( // 🔥 overflow fix
+        child: SingleChildScrollView(
           child: Center(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.bold,
                       color: AppColors.white,
                     ),
-                    textAlign: TextAlign.center, // ✅ fixed
+                    textAlign: TextAlign.center,
                   ),
 
                   const SizedBox(height: 10),
@@ -55,13 +55,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w600,
                       color: AppColors.whiteOpacity80,
                     ),
-                    textAlign: TextAlign.center, // ✅ fixed
+                    textAlign: TextAlign.center,
                   ),
 
                   const SizedBox(height: 20),
 
                   Container(
-                    padding: const EdgeInsets.all(24), // ✅ fixed
+                    padding: const EdgeInsets.all(24),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       gradient: LinearGradient(
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: GridView.builder(
                       shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(), // 🔥 important
+                      physics: const NeverScrollableScrollPhysics(),
                       gridDelegate:
                       const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 5,
